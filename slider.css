@@ -1,0 +1,91 @@
+
+#slider {
+	position: absolute;
+	top: 560px;
+	left: 450px;
+}
+
+#slides {
+	position: fixed;
+	left: 6%;
+	top: 25%;
+	display: inline-block;
+	height: 300px;
+	width: 860px;
+	overflow: hidden;
+	border: 2px solid #ef7408;
+	border-radius: 5px;
+}
+
+#slides .pic {
+	margin-left: 0%;
+	width: 4500px;
+	height: 300px;
+	-moz-transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-webkit-transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#nav {
+	position: fixed;
+	left: 45%;
+	top: 75%;
+	width: 90px;
+	height: 30px;
+	cursor: pointer;
+	background-color: #222;
+	border-radius: 5px;
+	border: 1px solid #ef7408;
+}
+
+#nav input {
+	display: none;
+}
+
+#nav label {
+	height: 10px;
+	width: 10px;
+	background-color: #888;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 3px;
+	margin-bottom: -5px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+#nav label:hover {
+	background-color: #ccc;
+}
+
+#choise1:checked ~#l1 {
+	background-color: #ef7408;
+}
+
+#choise2:checked ~#l2 {
+	background-color: #ef7408;
+}
+
+#choise3:checked ~#l3 {
+	background-color: #ef7408;
+}
+
+#choise4:checked ~#l4 {
+	background-color: #ef7408;
+}
+/* sliding magic */
+#choise1:checked ~ #slides .pic {
+	margin-left: 0%;
+}
+
+#choise2:checked ~ #slides .pic {
+	margin-left: -110%;
+}
+
+#choise3:checked ~ #slides .pic {
+	margin-left: -210%;
+}
+
+#choise4:checked ~ #slides .pic {
+	margin-left: -320%;
+}
+
